@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/main-style.css">
+    <title>BuumNotes</title>
+</head>
+
+<body class="dark-theme">
+    <header>
+        <div class="content-nav">
+            <div class="profile">
+                <i class='bx bx-user-circle'></i>
+                <span class="Username">Bienvenido, Brandon</span>
+            </div>
+          
+            <div class="settings-container">
+                <button class="settings"><i class='bx bx-cog'></i></button>
+                
+                <div class="settings-menu">
+                    <button id="toggle-theme">Cambiar Tema</button>
+                    <button id="logout">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-nav icon-container">
+            <a class="discord" href=""><i class='bx bxl-discord-alt'></i> Comunidad</a>
+            <a href=""><i class='bx bxl-twitter'></i></a>
+            <a href=""><i class='bx bxl-instagram'></i></a>
+            <a href=""><i class='bx bxl-youtube'></i></a>
+            <a href=""><i class='bx bxl-tiktok'></i></a>
+        </div>
+    </header>
+
+    <div class="Upgrade">
+        <span>Mejora a BuumNotes Pro</span>
+        <i class='bx bxs-up-arrow-circle'></i>
+    </div>
+
+    <main>
+        <section class="home active-section">
+            <h1>Bienvenido a BuumNotes</h1>
+            <p>Organiza tus pensamientos y tareas.</p>
+            <h2>Ultimas Actualizaciones</h2>
+            <ul class="update-logs">
+                <li>
+                    <strong>Version 1.2.0</strong> - 15/06/2024
+                    <ul>
+                        <li>Funcionalidad de arrastrar y soltar anuncio BuumNotes Pro.</li>
+                        <li>Modo oscuro mejorado.</li>
+                        <li>Corrección de errores menores.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Versión 1.1.0</strong> - 01/06/2024
+                    <ul>
+                        <li>Integración con Google Calendar.</li>
+                        <li>Nuevos temas de personalizacion.</li>
+                        <li>Mejoras en la interfaz de usuario.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Versión 1.0.0</strong> - 15/05/2024
+                    <ul>
+                        <li>Lanzamiento inicial.</li>
+                        <li>Funcionalidad básica de creación y edición de notas.</li>
+                        <li>Sincronización en la nube.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+
+        <section class="new-note">
+            <span style="margin-bottom: 35px;">Crear una Nueva Nota</span><br>
+           
+            <form id="note-form">
+
+                <label class="label-form">
+                    <input id="note-title" class="input-form" type="text" placeholder=" ">
+                    <span class="span-form">Título de la Nota</span>
+                </label>
+
+                <label class="label-form">
+                    <input id="note-content" class="input-form" type="text" placeholder=" ">
+                    <span class="span-form">Descripción de la Nota</span>
+                </label>
+                
+                <div class="reminder">
+                    <label for="note-reminder">Fecha: </label>
+                    <input id="note-reminder" class="input-form" type="date">
+                </div>
+                
+                <button type="submit" class="submit-button">Agregar Nota</button>
+            </form>
+        </section>
+      
+        <section class="my-notes">
+            <h2>Tus Notas</h2>
+            <ul id="notes-container"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="nav-link" data-target="home"><i class='bx bx-home'></i></a>
+        <a href="#" class="nav-link plus-circle" data-target="new-note"><i class='bx bx-plus-circle'></i></a>
+        <a href="#" class="nav-link" data-target="my-notes"><i class='bx bxs-folder-open'></i></a>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
